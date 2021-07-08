@@ -2,9 +2,11 @@ with payments as (
 
     select
         id as payment_id,
-        amount
+        orderid as order_id,
+        amount,
+        status
 
-    from dbt-tutorial.jaffle_shop.payments
+    from dbt-tutorial.stripe.payment
 
 )
 
